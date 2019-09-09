@@ -17,7 +17,7 @@ def reduce(array, starting_point=0)
     starting_point = yield(array[i],starting_point)
     i += 1
   end
-  if array.any? {|n|n.class != Fixnum}
+  if array.any? {|n|n.class != Integer}
     starting_point = !!starting_point
     array[i] = !!array[i]
   end
