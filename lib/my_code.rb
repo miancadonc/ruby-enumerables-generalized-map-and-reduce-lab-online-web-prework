@@ -12,7 +12,9 @@ end
 
 def reduce(array, starting_point=0)
   i = 0
-  if 
+  if array.any? {|n|n.class != Fixnum}
+    starting_point = !!starting_point
+  end
   while i < array.length do
     starting_point = yield(array[i],starting_point)
     i += 1
