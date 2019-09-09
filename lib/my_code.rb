@@ -12,11 +12,11 @@ end
 
 def reduce(array, starting_point=0)
   i = 0
+  if 
   while i < array.length do
     starting_point = yield(array[i],starting_point)
     i += 1
   end
-  if array.any?
   starting_point
 end
 
